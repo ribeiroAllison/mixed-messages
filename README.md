@@ -5,6 +5,14 @@ This is a project to test my abilities in JavaScript.
 
 The goal of this project is to create a **random** message generator that generates a new message every time the action button is activated.
 
+## Concept:
+The program will create messages for a **Psychic** to read the future of user.
+>Messeges will have three components:
+- A starter line, saying that she is seeing in the future that something will happen.
+- A verb
+- An action based on which kind of verb was randomly selected
+
+
 ### Tecnologies and concetps used:
 
 #### **JavaScript:**
