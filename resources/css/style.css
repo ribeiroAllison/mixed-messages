@@ -2,13 +2,13 @@
 
 body{
     background-color: rgb(151, 3, 32);
+    font-family: 'Macondo', cursive;
 }
 
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Macondo', cursive;
     color:antiquewhite;
 }
 
@@ -18,12 +18,66 @@ header h5{
 
 main{
     display: flex;
-    justify-content: center;
-    margin-top: 3rem;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 0 0 10rem;
 
 }
+
+
 
 main img{
     width: 400px;
     height: auto;
+}
+
+main button{
+    width: 10rem;
+    height: 10rem;
+    font-family: 'Macondo', cursive;
+    font-size: 2rem;
+    border-radius: 30%;
+    background-color: rgb(228, 101, 127);
+    border: 2px solid black;
+    
+    
+}
+
+#result{
+    width: 25rem;
+    height: 20rem;
+    border-radius: 5%;
+    background-color: rgb(226, 140, 157);
+    border: 5px solid black;
+    font-family: 'Macondo', cursive;
+    color: black;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    
+}
+
+main button:hover{
+    cursor: pointer;
+    background-color: rgb(230, 81, 111);
+    
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        flex-direction: column;
+        margin: 2rem 0;
+        
+    }
+    
+    main img{
+        width: 250px;
+        height: auto;
+        margin:10px;
+    }
+
+    #result{
+        width: 90%;
+        font-size: 1.5rem;
+    }
 }

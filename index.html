@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./resources/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="sentence-generator.js"></script>
     <title>Crazy Fortune Teller</title>
 </head>
 <body>
@@ -13,7 +14,10 @@
         <h5>At your own risk</h5>
     </header>
     <main>
+        <button onclick="sentence()">See your future, child</button>
         <img src="./resources/img/fortune teller 1.png">
-    </main>
+        <textarea type="text" id="result" disabled></textarea>
+        
+        </main>
 </body>
 </html>

@@ -36,7 +36,7 @@ const caseGive = ['a firm handshake on a snake', 'up giving up', 'that bad movie
 'it to me baby. Aham, aham', 'a friend a hug soon', 'your dog a break', 'in to fear', 'a mouth to mouth breathing on a toothless lady', 'me some change',
 'your cat a sibling']
 
-const caseBecome = ['filthy rich', 'even poorer', 'a movie star', 'a rock star', 'a K-Pop idol', 'a father of triples', 'a mother of triples', '27.8 pounds heavier',
+const caseBecome = ['filthy rich', 'even poorer', 'a movie star', 'a rock star', 'a K-Pop idol', 'a father of triplets', 'a mother of triplets', '27.8 pounds heavier',
 'thinner than a Victoria\'s Secret Angel', 'a handmaid in Buckingham palace', 'friends with a squirrel', 'the next emperor of Japan', 'heir to the iron throne',
 'lost in a jungle', 'one with the Force']
 
@@ -82,10 +82,10 @@ const sentence = () =>{
     finalString = sentenceArray.join(' ');
     
 
-    return finalString;
+    document.getElementById("result").value = finalString;
 }
 
-console.log(sentence());
+
 
 
 
