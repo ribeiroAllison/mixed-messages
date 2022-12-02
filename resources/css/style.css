@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+body{
+    background-color: rgb(151, 3, 32);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Macondo', cursive;
+    color:antiquewhite;
+}
+
+header h5{
+    margin: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+}
+
+main img{
+    width: 400px;
+    height: auto;
+}
