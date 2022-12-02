@@ -79,5 +79,10 @@ main button:hover{
     #result{
         width: 90%;
         font-size: 1.5rem;
+        color: black;
+    }
+
+    main button{
+        color: black;
     }
 }
