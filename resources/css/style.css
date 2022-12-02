@@ -5,6 +5,7 @@ body{
     font-family: 'Macondo', cursive;
 }
 
+/* HEADER SECTION */
 header{
     display: flex;
     flex-direction: column;
@@ -16,6 +17,7 @@ header h5{
     margin: 0;
 }
 
+/* MAIN SECTION */
 main{
     display: flex;
     justify-content: space-around;
@@ -63,6 +65,8 @@ main button:hover{
     
 }
 
+
+/* MEDIA QUERY SECTION */
 @media only screen and (max-width: 600px){
     main{
         flex-direction: column;
