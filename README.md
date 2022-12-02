@@ -31,7 +31,7 @@ Used to construct a simple interface so the user can press the action button and
 1. Semantic elements
 2. Responsive Design
 
-### **AI Drawing Designs**
+#### **AI Drawing Designs**
 The witch drawing was created by an AI (not mine), from the website [tinywow](https://tinywow.com/image/ai-art-generator)
 
 
