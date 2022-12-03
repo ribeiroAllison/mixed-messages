@@ -38,7 +38,7 @@ The witch drawing was created by an AI (not mine), from the website [tinywow](ht
 #### **Markdown:**
 - To write README file
 
-
+#### Here is the deployed finished program, hope you like it!: [Crazy Fortune Teller](https://ribeiroallison.github.io/mixed-messages/)
 
 ###### ~~*Wish me a luck (or a miracle)!*~~ Yay, I did it!
 
