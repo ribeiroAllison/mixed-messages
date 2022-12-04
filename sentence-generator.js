@@ -1,4 +1,4 @@
-//Defining a list of 100 most common verbs in English as an Array named "verbs"
+//Defining a list of verbs in as an Array.
 const verbs = ['be','have','make','take','lose','give','become'];
 
 //Declaring some starter phrases for the psychic to start her sentences
@@ -6,6 +6,8 @@ const starter = ['I see that', 'I predict that', 'It is clear that', 'The spirit
 'It is possible that', 'There is a 50/50 chance that', 'Be sure that', 'It is impossible that', 
 'BEWARE!', 'I do not think', 'I do believe', 'Hum, possibly'];
 
+// the verb will be the key factor on how the sentence ends so I created an array for each verb to finish a phrase that 
+// makes some sense
 const caseBe = ['fired', 'hired', 'lost in the woods', 'a doctor', 'a nurse', 'a mermaid', 
 'a fool', 'a Senior DEV', 'gone for good', 'using a wooden suit 6 months from now', 'happy', 'sad',
 'lonely', 'a womanizer', 'a traveler', 'a jockey', 'chief', 'poor forever', 
@@ -42,6 +44,7 @@ const caseBecome = ['filthy rich', 'even poorer', 'a movie star', 'a rock star',
 
 
 const sentence = () =>{
+    //defining a random number to be the index to be used on each array on final sencence 
     const randomStarter = Math.floor(Math.random() * starter.length);
     const randomVerb = Math.floor(Math.random() * verbs.length);
     const randomBe = Math.floor(Math.random() * caseBe.length);
@@ -51,12 +54,13 @@ const sentence = () =>{
     const randomLose = Math.floor(Math.random() * caseLose.length);
     const randomGive = Math.floor(Math.random() * caseGive.length);
     const randomBecome = Math.floor(Math.random() * caseBecome.length);
-    let sentenceArray = [];
-    sentenceArray.push(starter[randomStarter]);
+    let sentenceArray = []; // defining an empty array to store the final sentence
+    sentenceArray.push(starter[randomStarter]); //push random starter 
     sentenceArray.push('you will');
-    sentenceArray.push(verbs[randomVerb]);
-    switch (sentenceArray[2]){
-
+    sentenceArray.push(verbs[randomVerb]); //push a random verb
+    switch (sentenceArray[2]){ //sentenceArray[2] will always be the verb because [0] is the starter and [1] is the 
+        //string 'you will'
+        // depending on which verb was randomly selected one random "finisher" will be pushed
         case 'be': sentenceArray.push(caseBe[randomBe]);
         break;
 
@@ -79,10 +83,10 @@ const sentence = () =>{
         break;
     }
     
-    finalString = sentenceArray.join(' ');
+    finalString = sentenceArray.join(' '); //convert sentence array into a string
     
 
-    document.getElementById("result").value = finalString;
+    document.getElementById("result").value = finalString; // send it to index.html
 }
 
 
