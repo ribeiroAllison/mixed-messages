@@ -1,93 +1,66 @@
-//Defining a list of verbs in as an Array.
-const verbs = ['be','have','make','take','lose','give','become'];
 
-//Declaring some starter phrases for the psychic to start her sentences
-const starter = ['I see that', 'I predict that', 'It is clear that', 'The spirits are telling me', 
-'It is possible that', 'There is a 50/50 chance that', 'Be sure that', 'It is impossible that', 
-'BEWARE!', 'I do not think', 'I do believe', 'Hum, possibly'];
+const {SENTENCE_TREE} = require("./sentence-tree");
 
-// the verb will be the key factor on how the sentence ends so I created an array for each verb to finish a phrase that 
-// makes some sense
-const caseBe = ['fired', 'hired', 'lost in the woods', 'a doctor', 'a nurse', 'a mermaid', 
-'a fool', 'a Senior DEV', 'gone for good', 'using a wooden suit 6 months from now', 'happy', 'sad',
-'lonely', 'a womanizer', 'a traveler', 'a jockey', 'chief', 'poor forever', 
-'rich like Elon Musk', 'ugly as heck', 'in a zeppelin accident'];
-
-const caseHave = ['diarrhea' , 'just one shoe', 'heartburn', 'twelve children', 'one daughter next year',
-'two children', 'no time to chill', 'a fever', 'too many tasks to complete', 'brand new car',
-'the wallet stolen',  'just one arm soon', 'pimples on the forehead', 
-'many friends', 'a new boyfriend', 'a new girlfriend', 'to wake up early', 
-'to go to an early dinner party', 'to go back to school', 'a secret lover'] 
-
-const caseMake = ['a cake', '1 million dollars this year', 'a good husband', 'a good wife', 'a bad husband',
-'a bad wife', 'a joke nobody will laugh about', 'sense of your life', 'a trip to Hong Kong', 'a trip to North Korea',
-'it', 'many mistakes', 'up for being so you', 'coffee for a friend']
-
-const caseTake = ['a vacation in Bahamas', 'a fall and hit your head', 'too much time playing this game', 
-`note of my maker's GitHub profile https://github.com/ribeiroAllison and check his awesome work`, 'two hours to get to work',
-'a wrong turn on your way home', 'a bottle and drink it down', 'on meeeee, take me oooon', 'a sabbatical year soon', 'your pet to the vet',
-'a dive in Niagara Falls', 'your last breath sometime in the next 90 years', 'a bottle of Vodka to work', 'me to visit Rome',
-'some time to see all my random messages']
-
-const caseLose = ['all hope', 'your driver\'s licence','your favorite game', 'your religion', 'your sanity', 'your car keys',
-'your dignity', 'your life savings', 'an umbrella on a rainy day', 'your sense of style', 'the tip of your eleventh finger',
-'a bet with your fiancée', 'your favorite sock', 'yourself', 'everything']
-
-const caseGive = ['a firm handshake on a snake', 'up giving up', 'that bad movie another shot', 'dancing the mambo a chance',
-'bad gifts to your mother-in-law', 'some thought about the universe\'s heat death', 'a good grade to a bad student', 'me a 5 star review in the App Store',
-'it to me baby. Aham, aham', 'a friend a hug soon', 'your dog a break', 'in to fear', 'a mouth to mouth breathing on a toothless lady', 'me some change',
-'your cat a sibling']
-
-const caseBecome = ['filthy rich', 'even poorer', 'a movie star', 'a rock star', 'a K-Pop idol', 'a father of triplets', 'a mother of triplets', '27.8 pounds heavier',
-'thinner than a Victoria\'s Secret Angel', 'a handmaid in Buckingham palace', 'friends with a squirrel', 'the next emperor of Japan', 'heir to the iron throne',
-'lost in a jungle', 'one with the Force']
+const floorArray = array => Math.floor(Math.random() * array.length);
+    
 
 
 const sentence = () =>{
     //defining a random number to be the index to be used on each array on final sencence 
-    const randomStarter = Math.floor(Math.random() * starter.length);
-    const randomVerb = Math.floor(Math.random() * verbs.length);
-    const randomBe = Math.floor(Math.random() * caseBe.length);
-    const randomHave = Math.floor(Math.random() * caseHave.length);
-    const randomMake = Math.floor(Math.random() * caseMake.length);
-    const randomTake = Math.floor(Math.random() * caseTake.length);
-    const randomLose = Math.floor(Math.random() * caseLose.length);
-    const randomGive = Math.floor(Math.random() * caseGive.length);
-    const randomBecome = Math.floor(Math.random() * caseBecome.length);
-    let sentenceArray = []; // defining an empty array to store the final sentence
-    sentenceArray.push(starter[randomStarter]); //push random starter 
-    sentenceArray.push('you will');
-    sentenceArray.push(verbs[randomVerb]); //push a random verb
-    switch (sentenceArray[2]){ //sentenceArray[2] will always be the verb because [0] is the starter and [1] is the 
-        //string 'you will'
+    const randomStarter = floorArray(SENTENCE_TREE.starter);
+    const randomVerb = floorArray(SENTENCE_TREE.verbs);
+    const randomBe = floorArray(SENTENCE_TREE.caseBe);
+    const randomHave = floorArray(SENTENCE_TREE.caseHave);
+    const randomMake = floorArray(SENTENCE_TREE.caseMake);
+    const randomTake = floorArray(SENTENCE_TREE.caseTake);
+    const randomLose = floorArray(SENTENCE_TREE.caseLose);
+    const randomGive = floorArray(SENTENCE_TREE.caseGive);
+    const randomBecome = floorArray(SENTENCE_TREE.caseBecome);
+    const sentenceArray = [SENTENCE_TREE.starter[randomStarter], 'you will', SENTENCE_TREE.verbs[randomVerb]]; //setting first three elements of the sentence
+    
+    const verb = sentenceArray[2]; //extracting the verb from the sentence array
+    const pushFinals = (type, randomList) => {
+        
+        return sentenceArray.push(type[randomList]);
+    }
+    switch (verb){ 
         // depending on which verb was randomly selected one random "finisher" will be pushed
-        case 'be': sentenceArray.push(caseBe[randomBe]);
+        case 'be': pushFinals(SENTENCE_TREE.caseBe, randomBe);
         break;
 
-        case 'have':  sentenceArray.push(caseHave[randomHave]);
+        case 'have':  pushFinals(SENTENCE_TREE.caseHave, randomHave);
         break;
 
-        case 'make':  sentenceArray.push(caseMake[randomMake]);
+        case 'make':  pushFinals(SENTENCE_TREE.caseMake, randomMake);
         break;
 
-        case 'take':  sentenceArray.push(caseTake[randomTake]);
+        case 'take':  pushFinals(SENTENCE_TREE.caseTake, randomTake);
         break;
 
-        case 'lose':  sentenceArray.push(caseLose[randomLose]);
+        case 'lose':  pushFinals(SENTENCE_TREE.caseLose, randomLose);
         break;
 
-        case 'give':  sentenceArray.push(caseGive[randomGive]);
+        case 'give':  pushFinals(SENTENCE_TREE.caseGive, randomGive);
         break;
 
-        case 'become':  sentenceArray.push(caseBecome[randomBecome]);
+        case 'become':  pushFinals(SENTENCE_TREE.caseBecome, randomBecome);
         break;
     }
     
-    finalString = sentenceArray.join(' '); //convert sentence array into a string
+    let FINAL_STRING = sentenceArray.join(' '); //convert sentence array into a string
     
 
-    document.getElementById("result").value = finalString; // send it to index.html
+    document.getElementById("result").value = FINAL_STRING; // send it to index.html
+    
+    
+    
 }
+
+
+
+
+
+
 
 
 
