@@ -14,7 +14,7 @@ The goal of this project is to create a **random** message generator that genera
 
 ## Concept:
 
-The program will create messages for a **Psychic** to read the future of user.
+The program will create messages for a **Psychic** to read the future of the user.
 
 >Messeges will have three components:
 
@@ -59,19 +59,19 @@ E --> I(*be* finisher 1) -->U{Final Sentence}
 
 E --> J(*be* finisher 2) -->U{Final Sentence}
 
-E --> K(*be* finisher N) -->U{Final Sentence}
+E --> K(*be* finisher...) -->U{Final Sentence}
 
 F --> L(*get* finisher- 1) -->U{Final Sentence}
 
 F --> M(*get* finisher- 2) -->U{Final Sentence}
 
-F --> N(*get* finisher - N) -->U{Final Sentence}
+F --> N(*get* finisher...) -->U{Final Sentence}
 
 H --> R(*...* finisher- 1) -->U{Final Sentence}
 
 H --> S(*...* finisher- 2) -->U{Final Sentence}
 
-H --> T(*...* finisher - N) -->U{Final Sentence}
+H --> T(*...* finisher...) -->U{Final Sentence}
 
 
 
@@ -82,11 +82,11 @@ H --> T(*...* finisher - N) -->U{Final Sentence}
   
   
 
-### Tecnologies and concetps used:
+## Tecnologies and concetps used:
 
   
 
-#### **JavaScript:**
+### **JavaScript:**
 
 This language will be used for the back-end design of the project.
 
@@ -102,11 +102,11 @@ This language will be used for the back-end design of the project.
 
 5. Switch statements.
 
-6. DOM events
+6. DOM events.
 
   
 
-#### **HTML and CSS:**
+### **HTML and CSS:**
 
   
 
@@ -120,23 +120,23 @@ Used to construct a simple interface so the user can press the action button and
 
   
 
-#### **AI Drawing Designs**
+### **AI Drawing Designs:**
 
 The witch drawing was created by an AI (not mine), from the website [tinywow](https://tinywow.com/image/ai-art-generator)
 
   
   
 
-#### **Markdown:**
+### **Markdown:**
 
 - To write README file
 
   
 
-#### Here is the deployed finished program, hope you like it!: [Crazy Fortune Teller](https://ribeiroallison.github.io/mixed-messages/)
+## Here is the deployed finished program, hope you like it!: [Crazy Fortune Teller](https://ribeiroallison.github.io/mixed-messages/)
 
   
   
   
 
-###### ~~*Wish me a luck (or a miracle)!*~~ Yay, I did it!
+###### ~~*Wish me luck (or a miracle)!*~~ Yay, I did it!
