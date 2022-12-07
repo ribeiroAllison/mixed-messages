@@ -31,10 +31,10 @@ The program will create messages for a **Psychic** to read the future of user.
 
 >The elements that will compose the sentence are:
 
-- An initial phrase (`12 possibilities`)
-- 'You will' String (`1 possibility`)
-- A verb (`7 possibilities`)
-- A **Finisher** sentence (`Around 15 possibilities for each verb`)
+- An initial phrase `12 possibilities`
+- 'You will' String `1 possibility`
+- A verb `7 possibilities`
+- A **Finisher** sentence `Around 15 possibilities for each verb`
 
 >This is path these elements go through to be randomly generate a **final sentence**:
 
