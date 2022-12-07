@@ -1,4 +1,4 @@
-
+const button = document.getElementById('button');
 const SENTENCE_TREE = {
     //Defining a list of verbs in as an Array.
     verbs: ['be','have','make','take','lose','give','become'],
@@ -93,16 +93,14 @@ const sentence = () =>{
         break;
     }
     
-    const FINAL_STRING = sentenceArray.join(' '); //convert sentence array into a string
+    const finalString = sentenceArray.join(' '); //convert sentence array into a string
     
 
-    document.getElementById('result').innerHTML = FINAL_STRING; // send it to index.html
+    document.getElementById('result').innerHTML = finalString; // send it to index.html
     
     
     
 }
-
-let button = document.getElementById('button');
 
 button.addEventListener('click', sentence);
 
