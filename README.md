@@ -29,9 +29,15 @@ The program will create messages for a **Psychic** to read the future of user.
 
 ## Sentence Flow Chart
 
-This is path the elements of the sentences go through to be randomly generated:
+>The elements that will compose the sentence are:
 
-  
+- An initial phrase (`12 possibilities`)
+- 'You will' String (`1 possibility`)
+- A verb (`7 possibilities`)
+- A **Finisher** sentence (`Around 15 possibilities for each verb`)
+
+>This is path these elements go through to be randomly generate a **final sentence**:
+
 
 ```mermaid
 
@@ -95,6 +101,8 @@ This language will be used for the back-end design of the project.
 4. Conditionals.
 
 5. Switch statements.
+
+6.DOM events
 
   
 

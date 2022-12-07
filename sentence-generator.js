@@ -19,7 +19,7 @@ const SENTENCE_TREE = {
 
     caseHave: ['diarrhea' , 'just one shoe', 'heartburn', 'twelve children', 'one daughter next year',
     'two children', 'no time to chill', 'a fever', 'too many tasks to complete', 'brand new car',
-    'the wallet stolen',  'just one arm soon', 'pimples on the forehead', 
+    'the wallet stolen',  'just one arm soon', 'pimples on your forehead', 
     'many friends', 'a new boyfriend', 'a new girlfriend', 'to wake up early', 
     'to go to an early dinner party', 'to go back to school', 'a secret lover'],
 
@@ -103,12 +103,3 @@ const sentence = () =>{
 }
 
 button.addEventListener('click', sentence);
-
-
-
-
-
-
-
-
-
