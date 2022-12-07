@@ -1,0 +1,8 @@
+{
+  "name": "sentence-tree.js",
+  "scripts": {
+  "start": "node src/start.js"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}

@@ -1,5 +1,5 @@
 
-const {SENTENCE_TREE} = require("./sentence-tree");
+import { SENTENCE_TREE } from "./sentence-tree.mjs";
 
 const floorArray = array => Math.floor(Math.random() * array.length);
     
@@ -50,7 +50,8 @@ const sentence = () =>{
     let FINAL_STRING = sentenceArray.join(' '); //convert sentence array into a string
     
 
-    document.getElementById("result").value = FINAL_STRING; // send it to index.html
+    document.getElementById("result").innerText = FINAL_STRING; // NÃO FUNCIONA IMPORTANDO OBJETO
+    
     
     
     
@@ -58,11 +59,4 @@ const sentence = () =>{
 
 
 
-
-
-
-
-
-
-
-
+console.log(sentence());

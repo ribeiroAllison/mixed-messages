@@ -43,7 +43,10 @@ const SENTENCE_TREE = {
 
     caseBecome: ['filthy rich', 'even poorer', 'a movie star', 'a rock star', 'a K-Pop idol', 'a father of triplets', 'a mother of triplets', '27.8 pounds heavier',
     'thinner than a Victoria\'s Secret Angel', 'a handmaid in Buckingham palace', 'friends with a squirrel', 'the next emperor of Japan', 'heir to the iron throne',
-    'lost in a jungle', 'one with the Force']
+    'lost in a jungle', 'one with the Force'],
+
+    
 }
 
-module.exports = {SENTENCE_TREE};
+export {SENTENCE_TREE};
+
