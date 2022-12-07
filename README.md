@@ -102,7 +102,7 @@ This language will be used for the back-end design of the project.
 
 5. Switch statements.
 
-6.DOM events
+6. DOM events
 
   
 
