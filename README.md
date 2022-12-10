@@ -1,5 +1,7 @@
 # Mixed Message Project
 
+![alt screenshot of the program](/resources/img/screenshot.JPG "Program screenshot")
+
 This is a project to test my abilities in JavaScript.
 
   
