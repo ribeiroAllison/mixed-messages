@@ -1,4 +1,4 @@
-import { SENTENCE_TREE } from "./sentence-tree.js";
+import SENTENCE_TREE from "./sentence-tree.js";
 
 const button = document.getElementById('button');
 
@@ -21,9 +21,9 @@ const sentence = () =>{
     const sentenceArray = [SENTENCE_TREE.starter[randomStarter], 'you will', SENTENCE_TREE.verbs[randomVerb]]; //setting first three elements of the sentence
     
     const verb = sentenceArray[2]; //extracting the verb from the sentence array
-    const pushFinals = (type, randomList) => {
+    const pushFinals = (verbArray, randomIndex) => {
         
-        return sentenceArray.push(type[randomList]);
+        return sentenceArray.push(verbArray[randomIndex]);
     }
     switch (verb){ 
         // depending on which verb was randomly selected one random "finisher" will be pushed

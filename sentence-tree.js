@@ -46,4 +46,4 @@ const SENTENCE_TREE = {
     'lost in a jungle', 'one with the Force']
 }
 
-export {SENTENCE_TREE};
+export default SENTENCE_TREE;
